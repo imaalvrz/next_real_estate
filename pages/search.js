@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { baseURL, fetchAPI } from '../utils/fetchApi';
+import { baseURL, fetchAPI } from '../utils/fetchAPI';
 import SearchFilters from '../components/SearchFilters';
 import Property from '../components/Property';
 // import noresult from '../assets/images/noresult.svg';
