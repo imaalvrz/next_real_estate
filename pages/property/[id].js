@@ -53,14 +53,14 @@ const PropertyDetails = ({
         {description}
       </Typography>
       <Box sx={{ color: '#1769aa' }}>
-        <Typography variant="h6" textTransform="uppercase" sx={{ mt: 3 }}>
+        <Typography variant="body1" textTransform="uppercase" gutterBottom sx={{ mt: 3 }}>
           type: {type}
         </Typography>
-        <Typography variant="h6" textTransform="uppercase">
+        <Typography variant="body1" textTransform="uppercase" gutterBottom>
           purpose: {purpose}
         </Typography>
         {furnishingStatus && (
-          <Typography variant="h6" textTransform="uppercase">
+          <Typography variant="body1" textTransform="uppercase" gutterBottom>
             furnishing status: {furnishingStatus}
           </Typography>
         )}

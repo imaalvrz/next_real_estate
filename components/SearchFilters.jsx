@@ -33,7 +33,7 @@ const SearchFilters = () => {
       {filters.map((filter) => (
         <Grid item md={5}
           key={filter.queryName}
-          sx={{ minWidth: 170 }}
+          sx={{ minWidth: 160, mb:3 }}
         >
           <FormControl fullWidth>
             <InputLabel>{filter.placeholder}</InputLabel>

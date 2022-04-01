@@ -38,7 +38,7 @@ const Search = ({ properties }) => {
           <Property property={property} key={property.id} />
         ))}
       </Box>
-      {properties.length === 0 && <h1>No results Found</h1>}
+      {properties.length === 0 && <Typography variant="h5" textAlign="center">No results found...</Typography>}
     </Box>
   );
 };
