@@ -22,7 +22,7 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'space-evenly',
-          mt: 8,
+          mt: 5,
         }}
       >
         {propertiesForRent.map((property) => (

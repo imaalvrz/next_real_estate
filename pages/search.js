@@ -5,7 +5,7 @@ import SearchFilters from '../components/SearchFilters';
 import Property from '../components/Property';
 // import noresult from '../assets/images/noresult.svg';
 
-import { Box, Button, Container, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 
 const Search = ({ properties }) => {
   const [searchFilters, setSearchFilters] = useState(false);
@@ -13,33 +13,31 @@ const Search = ({ properties }) => {
 
   return (
     <Box sx={{ mt: 4 }}>
-      <Container>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h5" gutterBottom>
           Search properties {router.query.purpose}:
         </Typography>
         <Button
           variant="outlined"
           size="large"
+          sx={{my:1}}
           onClick={() => setSearchFilters((prevFilters) => !prevFilters)}
         >
           View Filters
         </Button>
         {searchFilters && <SearchFilters />}
 
-        <Box
-          sx={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            mt: 8,
-          }}
-        >
-          {properties.map((property) => (
-            <Property property={property} key={property.id} />
-          ))}
-        </Box>
-      </Container>
-
+      <Box
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'space-evenly',
+          mt: 4,
+        }}
+      >
+        {properties.map((property) => (
+          <Property property={property} key={property.id} />
+        ))}
+      </Box>
       {properties.length === 0 && <h1>No results Found</h1>}
     </Box>
   );

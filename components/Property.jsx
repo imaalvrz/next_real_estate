@@ -47,7 +47,7 @@ export default function Property({
             {millify(price)}
             {rentFrequency && `/${rentFrequency}`}
           </Typography>
-          <Avatar src={agency?.logo?.url} sx={{ width: 96, height: 96 }} />
+          <Avatar src={agency?.logo?.url} sx={{ width: 96, height: 96, boxShadow:3 }} />
         </Box>
         <Typography variant="body1" sx={{ my: 2 }}>
           {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft{' '}

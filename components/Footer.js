@@ -6,7 +6,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary">
       {'Copyright © '}
       <Link color="inherit" href="/">
-        Your Website
+        Real Estate
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -25,7 +25,7 @@ export default function StickyFooter() {
       }}
     >
       <Container
-        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+        sx={{ display: 'flex', flexWrap:"wrap", justifyContent: 'center', alignItems: 'center' }}
       >
         <Typography variant="body1">Real Estate App.&nbsp;</Typography>
         <Copyright />

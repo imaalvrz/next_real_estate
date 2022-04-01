@@ -26,7 +26,7 @@ const PropertyDetails = ({
 }) => (
   <>
     {photos && <ImageScrollBar data={photos} />}
-    <Card elevation={10} sx={{ p: 2, mx: 8, mt: 5 }}>
+    <Card elevation={10} sx={{ p: 2, mx: 0, mt: 3 }}>
       <Box
         sx={{
           display: 'flex',
@@ -34,12 +34,12 @@ const PropertyDetails = ({
         }}
       >
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h6" gutterBottom>
             {isVerified && <GoVerified style={{ color: 'green' }} />} AED{' '}
             {millify(price)}
             {rentFrequency && `/${rentFrequency}`}
           </Typography>
-          <Typography variant="h5" sx={{ my: 2 }}>
+          <Typography variant="body1" sx={{ my: 2 }}>
             {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft{' '}
             <BsGridFill />
           </Typography>
@@ -47,7 +47,7 @@ const PropertyDetails = ({
             {title}
           </Typography>
         </Box>
-        <Avatar src={agency?.logo?.url} sx={{ width: 128, height: 128 }} />
+        <Avatar src={agency?.logo?.url} sx={{ width: 128, height: 128, boxShadow:5 }} />
       </Box>
       <Typography variant="body1" color="text.secondary" sx={{ mt: 3 }}>
         {description}

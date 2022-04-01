@@ -13,15 +13,14 @@ const LeftArrow = () => {
       sx={{
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
-        mr: 1,
+        alignItems: 'center'
       }}
     >
       <IconButton>
         <ArrowLeftIcon
           onClick={() => scrollPrev()}
           d={['none', 'none', 'none', 'block']}
-          sx={{ fontSize: '40px' }}
+          sx={{ fontSize: '20px' }}
         />
       </IconButton>
     </Box>
@@ -36,15 +35,14 @@ const RightArrow = () => {
       sx={{
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
-        ml: 1,
+        alignItems: 'center'
       }}
     >
       <IconButton>
         <ArrowRightIcon
           onClick={() => scrollNext()}
           d={['none', 'none', 'none', 'block']}
-          sx={{ fontSize: '40px' }}
+          sx={{ fontSize: '20px' }}
         />
       </IconButton>
     </Box>
@@ -69,7 +67,7 @@ const ImageScrollBar = ({ data }) => (
           src={item.url}
           width={1000}
           height={500}
-          sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px"
+          // sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px"
         />
       </Box>
     ))}
