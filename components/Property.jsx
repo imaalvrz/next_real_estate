@@ -49,7 +49,7 @@ export default function Property({
           </Typography>
           <Avatar src={agency?.logo?.url} sx={{ width: 96, height: 96, boxShadow:3 }} />
         </Box>
-        <Typography variant="body1" sx={{ my: 2 }}>
+        <Typography variant="body1" sx={{ my: 1 }}>
           {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft{' '}
           <BsGridFill />
         </Typography>
