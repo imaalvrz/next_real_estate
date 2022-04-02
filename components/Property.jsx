@@ -29,7 +29,7 @@ export default function Property({
   },
 }) {
   return (
-    <Card sx={{ minWidth: 345, maxWidth: 345, mb: 5 }}>
+    <Card elevation={10} sx={{ minWidth: 345, maxWidth: 345, mb: 5 }}>
       <NextLink href={`/property/${externalID}`} passHref>
         <Link>
           <CardMedia

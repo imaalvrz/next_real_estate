@@ -32,14 +32,16 @@ export default function Navbar() {
   };
 
   return (
-    <>
       <AppBar position="static" className={classes.navbar}>
         <Toolbar>
-          <NextLink href="/" passHref>
-            <Link underline="none">
-              <Typography className={classes.title}>Real Estate</Typography>
-            </Link>
-          </NextLink>
+            <NextLink href="/" passHref>
+              <Link underline="none">
+                <Typography className={classes.title}>
+                  Real Estate
+                </Typography>
+              </Link>
+            </NextLink>
+
           <div className={classes.grow}></div>
           <div>
             <Button
@@ -139,6 +141,5 @@ export default function Navbar() {
           </div>
         </Toolbar>
       </AppBar>
-    </>
   );
 }

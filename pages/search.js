@@ -5,41 +5,49 @@ import SearchFilters from '../components/SearchFilters';
 import Property from '../components/Property';
 // import noresult from '../assets/images/noresult.svg';
 
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 
 const Search = ({ properties }) => {
   const [searchFilters, setSearchFilters] = useState(false);
   const router = useRouter();
 
   return (
-    <Box sx={{ mt: 4 }}>
-        <Typography variant="h5" gutterBottom>
-          Search properties {router.query.purpose}:
-        </Typography>
-        <Button
-          variant="outlined"
-          size="large"
-          sx={{my:1}}
-          onClick={() => setSearchFilters((prevFilters) => !prevFilters)}
-        >
-          View Filters
-        </Button>
+    <>
+      <Box sx={{ mt: 4 }}>
+        <Container >
+          <Typography variant="h5" gutterBottom>
+            Search properties {router.query.purpose}:
+          </Typography>
+          <Button
+            variant="outlined"
+            size="large"
+            sx={{ my: 1 }}
+            onClick={() => setSearchFilters((prevFilters) => !prevFilters)}
+          >
+            View Filters
+          </Button>
+        </Container>
         {searchFilters && <SearchFilters />}
 
-      <Box
-        sx={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-evenly',
-          mt: 4,
-        }}
-      >
-        {properties.map((property) => (
-          <Property property={property} key={property.id} />
-        ))}
+        <Box
+          sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-evenly',
+            mt: 3,
+          }}
+        >
+          {properties.map((property) => (
+            <Property property={property} key={property.id} />
+          ))}
+        </Box>
+        {properties.length === 0 && (
+          <Typography variant="h5" textAlign="center">
+            No results found...
+          </Typography>
+        )}
       </Box>
-      {properties.length === 0 && <Typography variant="h5" textAlign="center">No results found...</Typography>}
-    </Box>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import NextLink from 'next/link';
-import { Button, Box, Card, Link, Typography } from '@mui/material';
+import { Button, Box, Container, Grid, Link, Typography } from '@mui/material';
 
 export default function Banner({
   purpose,
@@ -14,29 +14,30 @@ export default function Banner({
   const imageUrl =
   'https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008';
   return (
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <Card
-        elevation={20}
-        sx={{ display: 'inline-flex', flexWrap: 'wrap', mt: 2, p: 1 }}
-      >
-        <Image src={imageUrl} width={500} height={300} alt="banner" />
-        <Box sx={{ mt:1, mx: 3 }}>
-          <Typography variant="h5" gutterBottom>
-            {purpose}
-          </Typography>
-          <Typography variant="h4" gutterBottom>
-            {title1} {title2}
-          </Typography>
-          <Typography variant="h6" gutterBottom>
-            {desc1} {desc2}
-          </Typography>
-          <Button variant="outlined" size="large" sx={{ mt: 1 }}>
-            <NextLink href={linkName} passHref>
-              <Link underline="none">{buttonText}</Link>
-            </NextLink>
-          </Button>
-        </Box>
-      </Card>
-    </div>
+    <Container>
+      <Grid container spacing={3} sx={{ justifyContent: 'center'}}>
+        <Grid item sx={12}>
+          <Image src={imageUrl} width={500} height={300} alt="banner" />
+        </Grid>
+        <Grid item sx={{ justifyContent: 'center' }}>
+          <Box>
+            <Typography variant="h5" gutterBottom>
+              {purpose}
+            </Typography>
+            <Typography variant="h4" gutterBottom>
+              {title1} <br /> {title2}
+            </Typography>
+            <Typography variant="h6" gutterBottom>
+              {desc1} {desc2}
+            </Typography>
+            <Button variant="outlined" size="large" sx={{ mt: 1 }}>
+              <NextLink href={linkName} passHref>
+                <Link underline="none">{buttonText}</Link>
+              </NextLink>
+            </Button>
+          </Box>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }

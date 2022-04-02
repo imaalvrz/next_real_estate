@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import NProgress from 'nprogress';
 import Router from 'next/router';
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
