@@ -47,7 +47,7 @@ const PropertyDetails = ({
             {title}
           </Typography>
         </Box>
-        <Avatar src={agency?.logo?.url} sx={{ width: 128, height: 128, boxShadow:5 }} />
+        <Avatar src={agency?.logo?.url} sx={{ width: 96, height: 96, boxShadow:5 }} />
       </Box>
       <Typography variant="body1" color="text.secondary" sx={{ mt: 3 }}>
         {description}
