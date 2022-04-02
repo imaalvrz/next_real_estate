@@ -43,17 +43,25 @@ const PropertyDetails = ({
             {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft{' '}
             <BsGridFill />
           </Typography>
-          <Typography variant="body1" textTransform="uppercase">
-            {title}
-          </Typography>
         </Box>
-        <Avatar src={agency?.logo?.url} sx={{ width: 96, height: 96, boxShadow:5 }} />
+        <Avatar
+          src={agency?.logo?.url}
+          sx={{ width: 96, height: 96, boxShadow: 5 }}
+        />
       </Box>
-      <Typography variant="body1" color="text.secondary" sx={{ mt: 3 }}>
+      <Typography variant="body1" textTransform="uppercase"sx={{ my: 3 }}>
+        {title}
+      </Typography>
+      <Typography variant="body1" color="text.secondary" >
         {description}
       </Typography>
       <Box sx={{ color: '#1769aa' }}>
-        <Typography variant="body1" textTransform="uppercase" gutterBottom sx={{ mt: 3 }}>
+        <Typography
+          variant="body1"
+          textTransform="uppercase"
+          gutterBottom
+          sx={{ mt: 3 }}
+        >
           type: {type}
         </Typography>
         <Typography variant="body1" textTransform="uppercase" gutterBottom>
@@ -79,7 +87,7 @@ const PropertyDetails = ({
                   color: '#1769aa',
                   border: 1,
                   borderRadius: 10,
-                  boxShadow: 2
+                  boxShadow: 2,
                 }}
               >
                 {amenity.text}
