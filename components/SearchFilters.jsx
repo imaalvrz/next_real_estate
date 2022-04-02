@@ -31,7 +31,7 @@ const SearchFilters = () => {
       }}
     >
       {filters.map((filter) => (
-        <Grid item md={5}
+        <Grid item xs={5}
           key={filter.queryName}
           sx={{ minWidth: 160, mb:3 }}
         >
