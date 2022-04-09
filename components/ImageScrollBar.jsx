@@ -13,7 +13,7 @@ const LeftArrow = () => {
       sx={{
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
       }}
     >
       <IconButton>
@@ -35,7 +35,7 @@ const RightArrow = () => {
       sx={{
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
       }}
     >
       <IconButton>

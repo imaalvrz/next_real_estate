@@ -1,4 +1,6 @@
 import NextLink from 'next/link';
+import DefaultImage from '../assets/images/house.jpeg';
+import millify from 'millify';
 import {
   Avatar,
   Box,
@@ -11,8 +13,7 @@ import {
 import { GoVerified } from 'react-icons/go';
 import { FaBed, FaBath } from 'react-icons/fa';
 import { BsGridFill } from 'react-icons/bs';
-import DefaultImage from '../assets/images/house.jpeg';
-import millify from 'millify';
+
 
 export default function Property({
   property: {
@@ -47,9 +48,12 @@ export default function Property({
             {millify(price)}
             {rentFrequency && `/${rentFrequency}`}
           </Typography>
-          <Avatar src={agency?.logo?.url} sx={{ width: 96, height: 96, boxShadow:3 }} />
+          <Avatar
+            src={agency?.logo?.url}
+            sx={{ width: 96, height: 96, boxShadow: 3 }}
+          />
         </Box>
-        <Typography variant="body1" sx={{ my: 1 }}>
+        <Typography variant="body1" sx={{ my: 0 }}>
           {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft{' '}
           <BsGridFill />
         </Typography>

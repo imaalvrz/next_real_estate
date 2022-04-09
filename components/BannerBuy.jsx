@@ -12,10 +12,10 @@ export default function Banner({
   buttonText,
 }) {
   const imageUrl =
-  'https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008';
+    'https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008';
   return (
     <Container>
-      <Grid container spacing={3} sx={{ justifyContent: 'center'}}>
+      <Grid container spacing={3} sx={{ justifyContent: 'center' }}>
         <Grid item sx={12}>
           <Image src={imageUrl} width={500} height={300} alt="banner" />
         </Grid>

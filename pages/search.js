@@ -15,13 +15,13 @@ const Search = ({ properties }) => {
     <>
       <Box sx={{ mt: 4 }}>
         <Container >
-          <Typography variant="h5" gutterBottom>
-            Search properties {router.query.purpose}:
+          <Typography variant="h4" color="#1769aa" gutterBottom>
+            Search properties {router.query.purpose}
           </Typography>
           <Button
             variant="outlined"
             size="large"
-            sx={{ my: 1 }}
+            sx={{ mt: 1, mb: 4 }}
             onClick={() => setSearchFilters((prevFilters) => !prevFilters)}
           >
             View Filters

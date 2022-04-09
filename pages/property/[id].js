@@ -1,6 +1,6 @@
+import ImageScrollBar from '../../components/ImageScrollBar';
 import { baseURL, fetchAPI } from '../../utils/fetchAPI';
 import millify from 'millify';
-import ImageScrollBar from '../../components/ImageScrollBar';
 import { Avatar, Box, Card, Typography } from '@mui/material';
 import { GoVerified } from 'react-icons/go';
 import { FaBath, FaBed } from 'react-icons/fa';
@@ -49,10 +49,10 @@ const PropertyDetails = ({
           sx={{ width: 96, height: 96, boxShadow: 5 }}
         />
       </Box>
-      <Typography variant="body1" textTransform="uppercase"sx={{ my: 3 }}>
+      <Typography variant="body1" textTransform="uppercase" sx={{ my: 3 }}>
         {title}
       </Typography>
-      <Typography variant="body1" color="text.secondary" >
+      <Typography variant="body1" color="text.secondary">
         {description}
       </Typography>
       <Box sx={{ color: '#1769aa' }}>
@@ -74,7 +74,13 @@ const PropertyDetails = ({
         )}
       </Box>
       <Box sx={{ mt: 3 }}>
-        {amenities.length && <Typography variant="h5">Amenities</Typography>}
+        {amenities.length >= 1 ? (
+          <Typography variant="h5">Amenities</Typography>
+        ) : (
+          <Typography variant="body1" color="text.secondary">
+            No information available about the amenities of this property
+          </Typography>
+        )}
         <Box sx={{ display: 'flex', flexWrap: 'wrap', mt: 1.5 }}>
           {amenities.map((item) =>
             item.amenities.map((amenity) => (

@@ -25,7 +25,12 @@ export default function StickyFooter() {
       }}
     >
       <Container
-        sx={{ display: 'flex', flexWrap:"wrap", justifyContent: 'center', alignItems: 'center' }}
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
       >
         <Typography variant="body1">Real Estate App.&nbsp;</Typography>
         <Copyright />

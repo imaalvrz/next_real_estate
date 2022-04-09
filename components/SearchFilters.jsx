@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { filterData, getFilterValues } from '../utils/filterData';
 import { useRouter } from 'next/router';
-import { Box, Grid, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import { filterData, getFilterValues } from '../utils/filterData';
+import { Grid, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 
 const SearchFilters = () => {
   // eslint-disable-next-line no-unused-vars
